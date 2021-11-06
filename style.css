@@ -136,8 +136,10 @@ p {
 }
 
 .fa-shopping-bag:hover,
-.fa-user:hover {
+.fa-user:hover,
+.fa-heart:hover {
   transform: scale(1.4);
+  color: #ecaa09;
 }
 
 /* .hero__icon:hover:nth-child(2) {
@@ -145,11 +147,6 @@ p {
   color: red !important;
   outline: 2px solid green;
 } */
-
-.fa-heart:hover {
-  transform: scale(1.4);
-  color: red;
-}
 
 .hero__icon {
   margin-left: 3rem;
@@ -659,6 +656,95 @@ footer {
   cursor: pointer;
   border-radius: 50%;
   z-index: 10;
+}
+
+/* ----------------------------------------------------------------
+----------------------------------clickedjackets-------------------
+------------------------------------------------------------------- */
+
+.section {
+  display: flex;
+  height: 83vh;
+  border-top: 1px solid #ecaa09;
+  border-bottom: 1px solid #ecaa09;
+  padding: 0 4rem;
+}
+
+.sidebar-left {
+  min-width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  padding-top: 5.8rem;
+  flex-direction: column;
+  row-gap: 45px;
+}
+
+.title-clicked-jacket {
+  padding-top: 5.5rem;
+  margin-bottom: 2rem;
+}
+.title-clicked-jacket span {
+  font-size: 12px;
+}
+
+.title-clicked-jacket p {
+  margin: 0.5rem 0;
+  font-size: 16px;
+  border-bottom: 1px solid #ecaa09;
+}
+
+.image-small {
+  height: 110px;
+  width: 110px;
+}
+.image-small img {
+  height: 110px;
+  width: 110px;
+}
+
+.main {
+  height: 100%;
+  min-width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clickedjacket-heart {
+  position: absolute;
+  top: 15%;
+  right: 17%;
+  transform: translate(-17%, -15%);
+
+  font-size: 2rem;
+}
+
+.fa-heart-two {
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #103b46;
+}
+
+.image-main {
+  height: 450px;
+  width: 600px;
+}
+
+.image-main img {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar-right {
+  min-width: 20%;
+  height: 100%;
+}
+.jacket__color-image {
+  display: flex;
+  flex-direction: row;
 }
 
 /* ---------------------------------------------------------media
