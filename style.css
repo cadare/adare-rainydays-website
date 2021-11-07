@@ -139,7 +139,7 @@ p {
 .fa-user:hover,
 .fa-heart:hover {
   transform: scale(1.4);
-  color: #ecaa09;
+  color: #fff;
 }
 
 /* .hero__icon:hover:nth-child(2) {
