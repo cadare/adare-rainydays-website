@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <title>RainyDays</title>
   <link rel="stylesheet" href="/style.css">
@@ -37,7 +37,8 @@
           <ul class="nav-ul" id="nav-ul">
             <li><a href="/index.html">Home</a></li>
             <li><a href="/jackets.html">Jackets</a></li>
-            <li><a href="/discover.html" class="active">Discover</a></li></a></li>
+            <li><a href="/discover.html">Discover</a></li>
+            <li><a href="/menjacket.html"></a></li>
           </ul>
 
         </div>
@@ -46,7 +47,7 @@
         <div class="hide-menu">
 
           <!-- search bar  -->
-          <input type="search" placeholder="&#x1F50E;&#xFE0E; What are you looking for?" class='nav__input'>
+          <input type="search" placeholder="&#x1F50E;&#xFE0E; What are you looking for?" class="nav__input">
 
 
           <!-- icons  -->
@@ -66,12 +67,12 @@
           <div class="btn-group">
             <div>
 
-              <a href="/log.html" class="btn-log-a Log-in">Log-in</a>
+              <a href="/log-in.html" class="btn-log-a Log-in">Log-in</a>
 
             </div>
             <div>
 
-              <a href="/sign.html" class="btn-log-a sign-up">Sign-up</a>
+              <a href="/sign-up.html" class="btn-log-a sign-up">Sign-up</a>
 
             </div>
           </div>
@@ -84,60 +85,33 @@
   <main>
 
 
-    <!-- The first section and only section on homepage -->
-    <section class=" hero__section">
+    <!-- <h1 class="women-title">Contact Us</h1> -->
 
-      <!-- left side card hero section -->
-      <div class="hero__left-side hero__left-discover">
-        <h2 class="hero__img-text">
-          Discover</h2>
-        <div class="btn-group-mobile-wrapper">
-          <div class="btn-group" id="btn-group-mobile">
-            <div>
-
-              <a href="/notfound.html" class="btn-log-a Log-in log-a Log-in-mobile">Sign-in</a>
-
-            </div>
-            <div>
-
-              <a href="/notfound.html" class="btn-log-a sign-up sign-up-mobile">Sign-up</a>
-
-            </div>
-          </div>
+    <div class="section__contact">
+      <div class="contact__container">
+        <div class="contact__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.133984549986!2d10.753770016005737!3d59.92991888187298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e625bebdd55%3A0x87598940160b87fa!2sNoroff%20Oslo!5e0!3m2!1sen!2sse!4v1636307210366!5m2!1sen!2sse"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
+        <div class="contact__contact-form">
+          <h1 class="contact__title">Contact Us</h1>
 
+          <form action="">
+            <input type="text" name="name" placeholder="Your Name" />
+            <input type="email" name="e-mail" placeholder="Your E-mail Adress" />
+            <input type="tel" name="phone" placeholder="Your Phone Number" />
+            <textarea name="text" id="" rows="8" placeholder="Your Message"></textarea>
+            <button class="contact__btn-send">Get a Call Back</button>
+          </form>
+        </div>
       </div>
-      <!-- right side card  hero seciotn-->
-      <div class="hero__right-side">
-        <div class="discover__container">
-          <h1 class="discover__title">Rainydays.
-          </h1>
-
-          <div class="discover__text">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate eveniet voluptatum eius optio!
-              Expedita a cum odit repudiandae, nobis placeat!</p>
-            <p>Sunt, voluptate deleniti? Provident ducimus dolore corrupti recusandae impedit fuga, unde molestias est
-              dignissimos eum aperiam suscipit deleniti. In, nihil.</p>
-            <p>Minus, atque maiores! Tempora odio aliquam officia! Iste sapiente sunt pariatur quos illum, aut, aperiam
-              laboriosam qui tenetur deserunt recusandae!</p>
-            <p>Illum quis est inventore? Ipsa nemo, id fugit possimus voluptates a! Provident, sed tempore nesciunt
-              magnam voluptas perspiciatis facilis sapiente!</p>
-          </div>
-        </div>
-        <div class="hero__btn">
-          <div class="btn__wrappers">
-            <a href='/menjacket.html' alt='Broken Link' class='hero__btn-buttons hero__btn-buttons-first'>SHOP
-              MEN'S</a></button>
-            <a href='/womenjacket.html' alt='Broken Link' class='hero__btn-buttons hero__btn-buttons-second'>SHOP
-              WOMEN'S</a></button>
-          </div>
-        </div>
-
-        <h6 class='discover__contact'><a href="/contact.html">Contact</a></h6>
 
 
-      </div>
-    </section>
+
+    </div>
+
+
 
   </main>
   <!-- Footer -->
