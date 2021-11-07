@@ -577,6 +577,7 @@ footer {
   height: 400px;
   display: flex;
   justify-content: center;
+
   align-items: center;
 }
 .contentBox .imgBx::before {
@@ -584,7 +585,8 @@ footer {
   position: absolute;
   width: 250px;
   height: 250px;
-  background: #85cf99;
+  background: var(--dark);
+
   border-radius: 50%;
 }
 
