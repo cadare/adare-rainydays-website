@@ -16,7 +16,7 @@ window.onload = () => {
     popup.style.display = 'block';
 
     // Add some time delay to show popup
-  }, 2500);
+  }, 1500);
 };
 
 close.addEventListener('click', () => {
@@ -43,7 +43,7 @@ setInterval(function () {
 
     $(this).fadeIn(400).css('color', hue);
   });
-}, 2500);
+});
 
 var heart = document.getElementById('heart');
 
