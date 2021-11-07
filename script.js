@@ -43,7 +43,7 @@ setInterval(function () {
 
     $(this).fadeIn(400).css('color', hue);
   });
-});
+}, 1500);
 
 var heart = document.getElementById('heart');
 
