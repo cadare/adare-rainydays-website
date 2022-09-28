@@ -34,3 +34,12 @@ var heart = document.getElementById('heart');
 heart.addEventListener('click', function () {
   heart.style.color = '#66c144';
 });
+
+var addItemId = 0;
+
+function addToCart(item) {
+  addItemId += 1;
+  let selectedItem = document.createElement('div')
+  selectedItem.classList.add('cartImg')
+
+}
