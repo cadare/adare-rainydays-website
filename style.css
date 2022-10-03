@@ -846,14 +846,25 @@ label {
   margin: 0 auto;
 }
 
+.product__price p{
+  text-align: left;
+}
+
+
+.addCart{
+
+background-color:#333;
+color:#fff;
+padding: 4px 8px;
+border-radius: 5px;
+  
+}
+
 /* ---------------------------------------------------------------------------------------
 -------------------------------------log-in----------------------------------------------
 ---------------------------------------------------------------------------------------- */
 
-.section {
-  /* height: 83vh; */
-  /* overflow: hidden; */
-}
+
 
 .log-up-title {
   text-align: center;
