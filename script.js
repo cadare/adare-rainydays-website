@@ -35,18 +35,80 @@ setInterval(function () {
 // getting the target element
 
 
-var myElement = document.querySelectorAll('.product__price');
-console.log(myElement)
+let myElement = document.querySelectorAll('.product__price');
 
+
+let product = [{
+    name: 'Gray Tshirt',
+    tag: 'graytshirt',
+    price: 15,
+    inCart: 0
+  },
+  {
+    name: 'black Tshirt',
+    tag: 'graytshirt',
+    price: 15,
+    inCart: 0
+  },
+  {
+    name: 'Gray hoodie',
+    tag: 'graytshirt',
+    price: 20,
+    inCart: 0
+  },
+  {
+    name: 'black hoodie',
+    tag: 'graytshirt',
+    price: 20,
+    inCart: 0
+  }
+]
 for (let i = 0; i < myElement.length; i++) {
   var btnAddCart = document.createElement("button");
   btnAddCart.className = 'addCart'
   btnAddCart.innerHTML = "Add";
+  myElement[i].appendChild(btnAddCart)
+  myElement[i].addEventListener('click', () => {
+    cartNumbers()
+  })
 
-  myElement[i].appendChild(btnAddCart).onclick = function () {
-    location.href = "/bag.html";
-  };
+
+
+  // .onclick = function () {
+  //   location.href = "/bag.html";
+  // };
+
+
 }
+
+function onloadCartNumber() {
+  let productNumbers = localStorage.getItem('cartNumbers');
+
+  if (productNumbers) {
+    document.querySelector('.cartCountNum span').textContent = productNumbers;
+  }
+}
+
+function cartNumbers() {
+  let productNumbers = localStorage.getItem('cartNumbers');
+
+  productNumbers = parseInt(productNumbers);
+
+  if (productNumbers) {
+    localStorage.setItem('cartNumbers', productNumbers + 1)
+    document.querySelector('.cartCountNum span').textContent = productNumbers + 1;
+
+  } else {
+    localStorage.setItem('cartNumbers', 1)
+    document.querySelector('.cartCountNum span').textContent = 1;
+  }
+
+
+}
+
+onloadCartNumber()
+
+
 
 
 // var button = document.createElement("BUTTON")

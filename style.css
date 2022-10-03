@@ -855,10 +855,33 @@ label {
 
 background-color:#333;
 color:#fff;
-padding: 4px 8px;
+padding: 6px 10px;
 border-radius: 5px;
+cursor: pointer;
   
 }
+
+.hero__icon-3{
+  width: 3.5rem;
+  font-size: 16px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  -ms-flex-align: center;
+align-items: baseline;
+background-color: #4267b2;
+color: #fff;
+padding: 5px 5px;
+
+}
+
+.fa-shopping-cart{
+  color: #fff;
+font-size: 18px;
+}
+
+
 
 /* ---------------------------------------------------------------------------------------
 -------------------------------------log-in----------------------------------------------
