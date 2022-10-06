@@ -1,3 +1,9 @@
+import {
+  products
+} from "./products.js";
+
+
+
 // Hamburger meny
 const hamburger = document.getElementById('hamburger');
 const navUl = document.getElementById('nav-ul');
@@ -38,38 +44,15 @@ setInterval(function () {
 let myElement = document.querySelectorAll('.product__price');
 
 
-let product = [{
-    name: 'Gray Tshirt',
-    tag: 'graytshirt',
-    price: 15,
-    inCart: 0
-  },
-  {
-    name: 'black Tshirt',
-    tag: 'graytshirt',
-    price: 15,
-    inCart: 0
-  },
-  {
-    name: 'Gray hoodie',
-    tag: 'graytshirt',
-    price: 20,
-    inCart: 0
-  },
-  {
-    name: 'black hoodie',
-    tag: 'graytshirt',
-    price: 20,
-    inCart: 0
-  }
-]
+
 for (let i = 0; i < myElement.length; i++) {
   var btnAddCart = document.createElement("button");
   btnAddCart.className = 'addCart'
   btnAddCart.innerHTML = "Add";
   myElement[i].appendChild(btnAddCart)
   myElement[i].addEventListener('click', () => {
-    cartNumbers()
+    cartNumbers(products[i])
+    totalCost(products[i])
   })
 
 
@@ -81,7 +64,7 @@ for (let i = 0; i < myElement.length; i++) {
 
 }
 
-function onloadCartNumber() {
+function onloadCartNumbers() {
   let productNumbers = localStorage.getItem('cartNumbers');
 
   if (productNumbers) {
@@ -89,9 +72,9 @@ function onloadCartNumber() {
   }
 }
 
-function cartNumbers() {
+function cartNumbers(product) {
   let productNumbers = localStorage.getItem('cartNumbers');
-
+  // console.log('The product in the cart is', product)
   productNumbers = parseInt(productNumbers);
 
   if (productNumbers) {
@@ -102,35 +85,55 @@ function cartNumbers() {
     localStorage.setItem('cartNumbers', 1)
     document.querySelector('.cartCountNum span').textContent = 1;
   }
-
+  setItems(product)
 
 }
 
-onloadCartNumber()
+function setItems(product) {
+  let cartItems = localStorage.getItem('productsInsideCart');
+  cartItems = JSON.parse(cartItems)
+  console.log('My cart Items are', cartItems)
+
+  if (cartItems != null) {
+    if (cartItems[product.tag] == undefined) {
+      cartItems = {
+        ...cartItems,
+        [product.tag]: product
+      }
+    }
+    cartItems[product.tag].inCart += 1
+  } else {
+    product.inCart = 1
+    cartItems = {
+      [product.tag]: product
+    }
+  }
 
 
 
+  localStorage.setItem("productsInsideCart", JSON.stringify(cartItems))
+}
 
-// var button = document.createElement("BUTTON")
-
-// button.innerText = "Button"
-
-// myElement.appendChild(button)
+//Function for addng total cost
 
 
-// var heart = document.getElementById('heart');
+function totalCost(product) {
 
-// heart.addEventListener('click', function () {
-//   heart.style.color = '#66c144';
-// });
+  //console.log('The total sum is ', product.price)
+  let cartCost = localStorage.getItem('totalCost')
+  console.log('My cart cost is', cartCost)
 
-// var addItemId = 0;
 
-// function addToCart(item) {
-//   addItemId += 1;
-//   var selectedItem = document.createElement('div')
-//   selectedItem.classList.add('cartImg')
-//   selectedItem.setAttribute('id', addItemId);
-//   var cartItems = document.getElementById('')
 
-// }
+  if (cartCost != null) {
+    cartCost = parseInt(cartCost)
+    localStorage.setItem('totalCost', cartCost + product.price)
+  } else {
+
+    localStorage.setItem('totalCost', product.price)
+
+  }
+
+}
+totalCost()
+onloadCartNumbers()

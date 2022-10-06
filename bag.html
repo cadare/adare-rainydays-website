@@ -102,53 +102,32 @@
   </header>
 
   <main>
-    <div class="section">
-      <div class="Purchase-wrapper">
-        <div class="sidebar-right">
-          <div class="title-clicked-jacket">
-            <h1>Moss Jacket</h1>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half-o checked"></span>
-            <span>45 Reviews</span>
-            <p>kr 1077.00</p>
-            <p>1 Item</p>
-
-          </div>
-          <div class="jacket__color">
-            <p>color</p>
-            <div class="jacket__color-image">
-              <div class="image-small"><img src="/images/jacket-front.jpg" alt=""></div>
-
-            </div>
-            <div class="jacket-size">
-              <p>Selected size</p>
-              <div class="select-size">
-                <input type="radio" name="s-size" id="small" checked />
-
-
-                <label for="small">S</label>
-
-              </div>
-            </div>
-            <div class="btn__wrappers">
-              <a href='/menjacket.html' alt='Broken Link' class='hero__btn-buttons hero__btn-buttons-first'>Go to
-                checkout</a></button>
-
-            </div>
-
-          </div>
-        </div>
+    <div class="cart">
+      <div class="cart-header">
+          <div class="column1">Item</div>
+          <div class="column2">Unit price</div>
+          <div class="column3">Units</div>
       </div>
+      <div class="cart-items">
+          <!-- render cart items here -->
+      </div>
+      <div class="cart-footer">
+          <div class="subtotal">
+              Subtotal (0 items): $0
+          </div>
+          <div class="checkout">
+              Proceed to checkout
+          </div>
+      </div>
+  </div>
+
   </main>
   <!-- Footer -->
   <footer class="footer">&copy; Rainydays 2021</footer>
 
   <!-- Jquery and javascript links for the script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/script.js"></script>
+  <script type='module' src="/script.js"></script>
 
 </body>
 
