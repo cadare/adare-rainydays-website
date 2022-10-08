@@ -515,7 +515,7 @@ footer {
   height: 150px;
 }
 .product:hover {
-  transform: scale(1.2);
+  transform: scale(1.01);
   outline: 1px solid #f5f5f5;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -842,12 +842,126 @@ label {
 /* -----------------------------------------------------------------------------------------
  ----------------------------------purchase bag---------------------------------------------
  --------------------------------------------------------------------------------------------*/
-.Purchase-wrapper {
-  margin: 0 auto;
+
+
+.product-items ion-icon{
+  font-size: 35px;
+  color:blue;
+  /* margin: 0px 10px; */
 }
+
+ .product-items{
+   width: 45%;
+   display:flex;
+   justify-content:left;
+   align-items: center;
+   padding: 10px 10px;
+   border-bottom: 1px solid lightgray;
+ 
+   /* flex-wrap: wrap; */
+
+ 
+
+ }
+
+ .samle {
+   display: flex;
+   flex-direction: row;
+ }
+ .product-items img{
+   height: 75px;
+   
+ }
+
+ 
+
+ 
+
+ .container-product{
+   max-width: 650px;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin: 0 auto;
+
+ font-size:14px;
+ 
+
+
+ }
+
+ .product-header{
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px solid lightgray;
+  margin: 0 auto;}
+
+ .product-title{
+   width: 53%;
+
+
+ }
+
+ .price{
+   width: 15%;
+   border-bottom: 1px solid lightgray;
+   display: flex;
+   align-items: center;
+   justify-content: left;
+  
+
+  }
+
+  .quantity{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+  }
+
+ .quantity ion-icon{
+  font-size: 30px;
+  color:blue;
+  margin: 0px 10px;
+ }
+
+ .quantity-product{
+   width: 30%;
+   border-bottom: 1px solid lightgray;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+
+ 
+ }
+
+ .totale{
+width:20%;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  align-items: center;
+align-content: center;
+  justify-content: center;
+  
+ }
+
+ .total{
+  width: 20%;
+   border-bottom: 1px solid lightgray;
+   display: flex;
+   align-items: center;
+ }
+
+ .Purchase-wrapper {
+  margin: 0 auto;
+
+}
+
+
 
 .product__price p{
   text-align: left;
+
 }
 
 
@@ -858,7 +972,24 @@ color:#fff;
 padding: 6px 10px;
 border-radius: 5px;
 cursor: pointer;
+
   
+}
+
+.cartTotalContainer{
+  display: flex;
+justify-content: flex-end;
+width: 90%;
+padding: 10px 0;
+font-size: 16px;
+}
+
+.cartTotalTitle{
+  width: 30%;
+}
+
+.cartTotal{
+  width:10%;
 }
 
 .hero__icon-3{
@@ -878,7 +1009,7 @@ padding: 5px 5px;
 
 .fa-shopping-cart{
   color: #fff;
-font-size: 18px;
+font-size: 22px;
 }
 
 

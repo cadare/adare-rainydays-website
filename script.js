@@ -135,5 +135,57 @@ function totalCost(product) {
   }
 
 }
-totalCost()
+
+function displayCard() {
+  let cartItems = localStorage.getItem('productsInsideCart');
+  cartItems = JSON.parse(cartItems)
+  let productContainer = document.querySelector('.product-box')
+  let cartCost = localStorage.getItem('totalCost')
+
+  if (cartItems && productContainer) {
+    productContainer.innerHTML = '';
+    Object.values(cartItems).map(item => {
+      productContainer.innerHTML += `
+     
+     <div class='samle'> 
+      <div class='product-items'>
+     
+      <ion-icon name="close-circle"></ion-icon>
+      <ion-icon name="arrow-dropleft-circle"></ion-icon>
+     <img src="/images/${item.tag}.jpg">
+     <span>${item.name}</span>
+  
+     </div>
+     <div class='price'>$${item.price},00$</div>
+     <div class='quantity'>
+     <ion-icon name="add-circle"></ion-icon>
+     <span>${item.inCart}</span>
+      <ion-icon name="remove-circle"></ion-icon>
+     </div>
+
+     <div class='totale'>$${item.inCart * item.price},00</div>
+
+   
+     </div>
+ 
+  
+      `
+    })
+    productContainer.innerHTML += `  
+  <div class='cartTotalContainer'>
+  <h4 class='cartTotalTitle'>Cart Total  </h4>
+  <h4 class='cartTotal'>
+   $${cartCost}
+  </h4>
+  </div>
+    `;
+
+
+  }
+
+}
+
+
+// totalCost()
 onloadCartNumbers()
+displayCard()
