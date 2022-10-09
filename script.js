@@ -189,3 +189,79 @@ function displayCard() {
 // totalCost()
 onloadCartNumbers()
 displayCard()
+
+
+const form = document.querySelector('.form-connect')
+var firstName = document.getElementById('name')
+
+
+const email = document.querySelector('.email');
+const msg = document.querySelector('.msg');
+const errorNodes = document.querySelectorAll('.error')
+const success = document.getElementById('success');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  validateForm()
+
+});
+
+function validateForm() {
+
+  clearMassage()
+  let errorFlag = false;
+
+  if (firstName.value.length < 1) {
+
+    errorNodes[0].innerText = 'Name cannot be blank';
+    firstName.classList.add('error-border')
+    errorFlag = true
+
+  }
+  if (!emailIsValid(email.value)) {
+    errorNodes[1].innerText = 'Invalid email';
+    email.classList.add('error-border')
+    errorFlag = true
+  }
+  if (msg.value.length < 1) {
+    errorNodes[2].innerText = 'Kindly enter your massage';
+    msg.classList.add('error-border')
+    errorFlag = true
+  }
+
+  if (!errorFlag) {
+    success.innerHTML = 'Success!'
+    setTimeout(function () {
+      refreshPage()
+    }, 1000);
+
+  }
+
+}
+
+/// clear error and success
+function clearMassage() {
+  for (let i = 0; i < errorNodes.length; i++) {
+    errorNodes[i].innerText = "";
+
+  }
+
+  success.innerText = ''
+  firstName.classList.remove('error-border');
+  email.classList.remove('error-border');
+  msg.classList.remove('error-border')
+
+
+}
+//is emailvalid
+function emailIsValid(email) {
+  let pattern = /\S+@\S+\.\S+/;
+  return pattern.test(email)
+
+}
+
+function refreshPage() {
+  console.log("Refreshing page");
+  location.reload ? location.reload() : location = location;
+}
