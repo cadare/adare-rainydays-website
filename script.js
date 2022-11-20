@@ -200,12 +200,12 @@ const msg = document.querySelector('.msg');
 const errorNodes = document.querySelectorAll('.error')
 const success = document.getElementById('success');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault()
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault()
 
-  validateForm()
+//   validateForm()
 
-});
+// });
 
 function validateForm() {
 
@@ -265,3 +265,34 @@ function refreshPage() {
   console.log("Refreshing page");
   location.reload ? location.reload() : location = location;
 }
+
+
+
+const url = 'https://brbforum.com/wp-json/wc/store/products?consumer_key=ck_f594e7cc7bc4a0174b4687b924a966264f7bf578&consumer_secret=cs_b13b4fd6e8bc3e176bb2e74a3c4ded2f8e3c4fea'
+
+
+const productContainer = document.querySelector('.productPage');
+const productShow = document.querySelector('.product-item')
+
+async function getProducts(url) {
+  const response = await fetch(url);
+  const products = await response.json();
+  console.log(products[1].prices)
+
+  products.forEach(function (product) {
+    productContainer.innerHTML += ` 
+    <div class='product-fetch'>
+    
+    <div class="products"><h2>${product.name}</h2>
+    <div class="product-image_fetch" style="background-image:url('${product.images[0].src }')"></div>
+
+    
+    </div>
+    </div>`
+  })
+}
+
+getProducts(url)
+console.l
+var json = JSON.stringify(products[1].tag)
+productShow.innerHTML = `  <div class="products"><h2>${json}</h2>`

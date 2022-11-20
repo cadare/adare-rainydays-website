@@ -483,10 +483,33 @@ footer {
   flex: 1;
   border-left: 1px solid #f1f1f1;
 }
-
+.men-title,
 .women-title,
+.section__men p,
 .section__women p {
   text-align: center;
+}
+
+.product-image_fetch{
+
+  height:14rem;
+  width: 18rem;
+  margin-left: 2rem;
+  background-repeat: no-repeat  ;
+  display: flex;
+  justify-content: center;
+
+  
+}
+
+.products h2{
+  text-align: center;
+}
+
+.product-fetch{ 
+display: inline-block;
+border:2px solid blue;
+
 }
 
 .collection {
