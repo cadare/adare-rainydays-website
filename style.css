@@ -508,8 +508,19 @@ footer {
 
 .product-fetch{ 
 display: inline-block;
-border:2px solid blue;
 
+
+}
+
+/* ---------product single display -------------*/
+
+.productPage-singleItem{
+  height: 400px;
+  width: 400px;
+  margin:0 auto;
+  background-image: url('https://brbforum.com/wp-content/uploads/2021/08/image_men-10.jpg');
+  background-repeat: no-repeat;
+  border:2px solid green;
 }
 
 .collection {
