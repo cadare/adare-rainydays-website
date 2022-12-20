@@ -514,7 +514,18 @@ display: inline-block;
 
 /* ---------product single display -------------*/
 
+.card_fetch{
+  margin: 10rem 30rem; 
+}
+.card_fetch, a,h1,p{
+  color:#333;
+  text-decoration: none;
+  text-align: left;
 
+  
+
+  
+}
 
 .collection {
   display: flex;

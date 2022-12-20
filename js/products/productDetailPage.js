@@ -41,6 +41,5 @@ fetchGame();
 function createHtml(details) {
     detailContainer.innerHTML = `<h1>${details.title.rendered}</h1>
                                <h6>${details.content.rendered}</h6>
-                                <div class="details-description">${details.description}</div>
-                                <time class="details-date">Released: ${details.released}</time>`;
+                             `;
 }

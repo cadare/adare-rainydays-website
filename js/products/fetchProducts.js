@@ -32,18 +32,21 @@ function displayProducts(products) {
             // </div>
             // </div>`
 
-            `<a href="product-item.html?id=${product.id}" class="card">
+            ` <div class="fetch-box">
+            <a href="product-item.html?id=${product.id}" class="card_fetch">
          
            
             <h1 class="title">${product.title.rendered}<h1/>
-            
+               </a>
             
             <p class="paragrpy">${product.excerpt.rendered}<p/>
           
                                         
                                                                                                                                                                                                        
                                           
-                                            </a>`;
+                                         
+                                            
+                                            </div>`;
 
 
 
